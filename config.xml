@@ -21,9 +21,7 @@
 	<icon src="xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />	
 	
 	<gap:splash src="splashing.png" />
-	<plugin name="com.sharinglabs.cordova.plugin.datepicker" source="pgb" spec="1.1.3" />
-
-
+	
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	<feature name="http://api.phonegap.com/1.0/network" />
 
