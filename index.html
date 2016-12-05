@@ -1,0 +1,181 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>profile</title>
+	<link rel="stylesheet" href="themes/profiledata.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<!---<script src="gtimages.js"></script>-->
+	<!---<script src="images.js"></script>---->
+	<script src="my_script.js"></script>
+</head>
+
+ <script type="text/javascript">
+
+ $(document).ready(function() {
+
+    $("#logy").click(function() {                
+
+      $.ajax({    //create an ajax request to load_page.php
+        type: "GET",
+        url: "logins.php",             
+        dataType: "html",   //expect html to be returned                
+        success: function(response){                    
+            $("#respondz").html(response); 
+            //alert(response);
+        }
+
+    });
+});
+});
+
+</script>
+
+<style>
+	.background-gradient {
+background-image: -webkit-gradient(
+linear, left bottom, left top,
+color-stop(0.22, rgb(92,92,92)),
+color-stop(0.57, rgb(158,153,158)),
+color-stop(0.84, rgb(92,92,92))
+);
+background-image: -moz-linear-gradient(
+90deg,
+rgb(92,92,92),
+rgb(158,153,158),
+rgb(92,92,92));
+}
+
+
+</style>
+
+<body>
+
+
+
+	<!---------------------------------------------------------------------------------------------------->
+	<div data-role="page" id="login" data-theme="d">
+	<div  data-role="header" class="background-gradient" data-position="fixed">
+	<img src="themes/images/icon1.jpg" width="35px" height="35px" align="left" onmouseover="this.src='themes/images/tebza.jpg'" width="200px" height="200px" align="left" onmouseout="this.src='themes/images/icon1.jpg'" />
+    <h1 class="ui-title" tabindex="0" role="heading" aria-level="1" >
+
+Login
+
+</h1>
+
+	<a role="button" data-role="button" class="ui-link ui-btn-right ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all" href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+</div>
+	
+	
+	<div data-role="navbar" data-theme="a">
+	<ul>
+		
+		<li><a href="#beforeAcc" data-theme="a">Terms and conditions</a></li>
+		
+			
+		</ul>
+		</div>
+	<div data-role="content" class="background-gradient">
+        <center><span style="color:white"><h3>Login</h3></span></center>
+		<form action="http://localhost/profile/logins.php" method="POST">
+			<strong>Username</strong>: <input type="text" name="user" placeholder="Insert your username!" data-theme="a"/></br />
+			<strong>Password</strong>: <input type="password" name="pass" placeholder="Insert your password!" data-theme="a"/></br />
+                    <button type="submit" name="log" id="logy" class="background-gradient">login</button><br />
+					
+					<center><div id="respondz">
+	  
+	  
+</div></center>
+		</form>
+		
+		
+	
+	<center><span style="color:white">Register new account!</span></center>
+	
+	<button id="subreg" value="register" class="background-gradient" onClick="registration()"><span style="color:white" align="center">register</span></button>
+	
+	
+
+	<script type="text/javascript">
+function registration()
+
+  window.location.href="http://localhost/profile/index.html#register";
+
+</script>
+	</div>
+	
+	<div data-role="footer" id="footer" data-position="fixed" class="background-gradient">
+	<h1>Pro-File</h1>
+	</div>
+	</div>
+	<!---------------------------------------------------------------------------------------------------->
+	<div data-role="page" id="register" data-theme="d">
+		<div data-role="header" data-theme="d" class="background-gradient">
+	<img src="themes/images/icon1.jpg" width="35px" height="35px" align="left" onmouseover="this.src='themes/images/tebza.jpg'" width="200px" height="200px" align="left" onmouseout="this.src='themes/images/icon1.jpg'" />
+    <h1 class="ui-title" tabindex="0" role="heading" aria-level="1" >
+
+   Register
+
+</h1>
+
+	<a role="button" data-role="button" class="ui-link ui-btn-right ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all" href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+</div>
+	
+	
+    <div data-role="content" class="background-gradient">
+		<form action="http://localhost/profile/register.php" method="post">
+			Username: <input type="text" name="user" data-theme="d" placeholder="Username!"/></br />
+			Password : <input type="password" name="pass" data-theme="d" placeholder="Password!"/></br />
+			UserTracker: <input type="text" name="name" data-theme="d" placeholder="Sharing code!/ Optional"/></br />
+			 <input type="submit" value="sign up"/>
+           	
+            
+		</form>
+		
+	</div>
+	<div data-role="footer" id="footer" class="background-gradient" data-position="fixed">
+	<h1>Pro-File</h1>
+	</div>
+</div>
+	
+	<!-------------------------------------------------------------------------------------------------->
+	<!----------------------------------------beforeAcc---------------------------------------------------->
+	
+	<div data-role="page" id="beforeAcc">
+<div  data-role="header" class="background-gradient" data-position="fixed">
+	<img src="themes/images/icon1.jpg" width="35px" height="35px" align="left" onmouseover="this.src='themes/images/tebza.jpg'" width="200px" height="200px" class="background-gradient" align="left" onmouseout="this.src='themes/images/icon1.jpg'" />
+    <h1 class="ui-title" tabindex="0" role="heading" aria-level="1" >
+
+Terms of use
+
+</h1>
+
+	<a role="button" data-role="button" class="ui-link ui-btn-right ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all" href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+</div>
+	<div data-role="content" class="background-gradient">
+     
+	 
+	<form action="http://localhost/profile/get-posts.php" class="background-gradient" method="POST">
+	<span style="color:white">name :</span> <input type="text" name="user" class="background-gradient" placeholder="Please enter your name!"/><br>
+	<button type="submit" class="background-gradient">Submit</button>
+
+		
+	</form>
+	
+	</div>
+	
+	<div data-role="footer" data-position="fixed" class="background-gradient">
+	<h1>Pro-file @2016</h1>
+	</div>
+	</div>
+	
+	<!------------------------------------------------------------------------------------------------->
+	<script src="registers.js"></script>
+</body>
+</html>
