@@ -1,3 +1,0 @@
-# coff
-
-job hunting solutions
