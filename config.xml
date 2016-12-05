@@ -20,7 +20,6 @@
 	<icon src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
 	<icon src="xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />	
 	
-	<gap:splash src="splashing.png" />
 	
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	<feature name="http://api.phonegap.com/1.0/network" />
